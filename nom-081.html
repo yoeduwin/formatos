@@ -352,21 +352,23 @@
             </div>
         </div>
 
-        <!-- QUICK DOWNLOAD SECTION -->
+        <!-- FORMATOS DE TRABAJO (descarga automática con fecha) -->
         <p class="section-title" style="margin-top:8px;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" stroke="#007836" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <polyline points="7 10 12 15 17 10" stroke="#007836" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <line x1="12" y1="15" x2="12" y2="3" stroke="#007836" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Acceso Rápido a Formatos Clave
+            Formatos de Trabajo
         </p>
 
         <div class="formats-grid">
 
             <!-- FORMATO DE CAMPO -->
-            <a href="https://docs.google.com/spreadsheets/d/1QGimnoM2awMsDebZL_l7NIBbXLshPQnC/edit?usp=sharing&rtpof=true&sd=true"
-               target="_blank" rel="noopener" class="download-btn">
+            <a href="#" onclick="return descargar(
+                    'https://docs.google.com/spreadsheets/d/1QGimnoM2awMsDebZL_l7NIBbXLshPQnC/export?format=xlsx',
+                    'Formato_de_Campo_' + hoy() + '.xlsx')"
+               class="download-btn">
                 <span class="btn-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                         <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" fill="#005600"/>
@@ -378,13 +380,15 @@
                 </span>
                 <span class="btn-text">
                     <span class="btn-name">Formato de Campo</span>
-                    <span class="btn-meta">Hoja de registro en campo (Excel)</span>
+                    <span class="btn-meta">Descarga con fecha del d&iacute;a (Excel)</span>
                 </span>
             </a>
 
             <!-- GENERADOR DE CAMPO -->
-            <a href="https://drive.google.com/file/d/1bznvJCR-AojGXL6UcPhn6790Rxup-7lQ/view?usp=sharing"
-               target="_blank" rel="noopener" class="download-btn">
+            <a href="#" onclick="return descargar(
+                    'https://drive.google.com/uc?export=download&id=1bznvJCR-AojGXL6UcPhn6790Rxup-7lQ',
+                    'Generador_de_Campo_' + hoy())"
+               class="download-btn">
                 <span class="btn-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                         <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" fill="#005600"/>
@@ -395,13 +399,15 @@
                 </span>
                 <span class="btn-text">
                     <span class="btn-name">Generador de Campo</span>
-                    <span class="btn-meta">Archivo generador de registros</span>
+                    <span class="btn-meta">Descarga con fecha del d&iacute;a</span>
                 </span>
             </a>
 
             <!-- MEMORIA DE CÁLCULO -->
-            <a href="https://docs.google.com/spreadsheets/d/1tUgkoIdn52-kRIHfGiL5tIkmYkl1c6qM/edit?usp=sharing&rtpof=true&sd=true"
-               target="_blank" rel="noopener" class="download-btn">
+            <a href="#" onclick="return descargar(
+                    'https://docs.google.com/spreadsheets/d/1tUgkoIdn52-kRIHfGiL5tIkmYkl1c6qM/export?format=xlsx',
+                    'Memoria_de_Calculo_' + hoy() + '.xlsx')"
+               class="download-btn">
                 <span class="btn-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                         <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" fill="#005600"/>
@@ -413,13 +419,15 @@
                 </span>
                 <span class="btn-text">
                     <span class="btn-name">Memoria de C&aacute;lculo</span>
-                    <span class="btn-meta">Hoja de c&aacute;lculos y resultados (Excel)</span>
+                    <span class="btn-meta">Descarga con fecha del d&iacute;a (Excel)</span>
                 </span>
             </a>
 
             <!-- INFORME -->
-            <a href="https://drive.google.com/file/d/10lv57dN93rcWLW-SZ29E_FPwegGYZBHC/view?usp=sharing"
-               target="_blank" rel="noopener" class="download-btn">
+            <a href="#" onclick="return descargar(
+                    'https://drive.google.com/uc?export=download&id=10lv57dN93rcWLW-SZ29E_FPwegGYZBHC',
+                    'Informe_' + hoy())"
+               class="download-btn">
                 <span class="btn-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                         <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" fill="#005600"/>
@@ -430,7 +438,88 @@
                 </span>
                 <span class="btn-text">
                     <span class="btn-name">Informe</span>
-                    <span class="btn-meta">Informe final de medici&oacute;n</span>
+                    <span class="btn-meta">Descarga con fecha del d&iacute;a</span>
+                </span>
+            </a>
+
+        </div>
+
+        <!-- DOCUMENTOS DE CERTIFICACIÓN -->
+        <p class="section-title" style="margin-top:24px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="5" stroke="#007836" stroke-width="2"/>
+                <path d="M8 14l-2 7 6-3 6 3-2-7" stroke="#007836" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Documentos de Certificaci&oacute;n
+        </p>
+
+        <div class="formats-grid">
+
+            <!-- APROBACIÓN PROFEPA -->
+            <a href="https://drive.google.com/uc?export=download&id=1y8SQhtRczliTDBBvAr8Vb_iQH1ZvgSP3"
+               target="_blank" rel="noopener" class="download-btn">
+                <span class="btn-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" fill="#005600"/>
+                        <polyline points="14 2 14 8 20 8" fill="#005600" stroke="#005600" stroke-width="0.5"/>
+                        <line x1="12" y1="18" x2="12" y2="12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <polyline points="9 15 12 18 15 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="btn-text">
+                    <span class="btn-name">Aprobaci&oacute;n PROFEPA</span>
+                    <span class="btn-meta">Documento oficial de aprobaci&oacute;n</span>
+                </span>
+            </a>
+
+            <!-- ACREDITACIÓN EMA -->
+            <a href="https://drive.google.com/uc?export=download&id=1SVeQaAss2qoiwZFWrl1Jx2cneM0oYpYz"
+               target="_blank" rel="noopener" class="download-btn">
+                <span class="btn-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" fill="#005600"/>
+                        <polyline points="14 2 14 8 20 8" fill="#005600" stroke="#005600" stroke-width="0.5"/>
+                        <line x1="12" y1="18" x2="12" y2="12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <polyline points="9 15 12 18 15 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="btn-text">
+                    <span class="btn-name">Acreditaci&oacute;n EMA</span>
+                    <span class="btn-meta">Entidad Mexicana de Acreditaci&oacute;n</span>
+                </span>
+            </a>
+
+            <!-- CALIBRACIÓN SONÓMETRO SO11-01 -->
+            <a href="https://drive.google.com/uc?export=download&id=1w9Qn8dXqgTkvXH4N_YGdGodIOvpYhjh_"
+               target="_blank" rel="noopener" class="download-btn">
+                <span class="btn-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" fill="#005600"/>
+                        <polyline points="14 2 14 8 20 8" fill="#005600" stroke="#005600" stroke-width="0.5"/>
+                        <line x1="12" y1="18" x2="12" y2="12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <polyline points="9 15 12 18 15 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="btn-text">
+                    <span class="btn-name">Calibraci&oacute;n Son&oacute;metro SO11-01</span>
+                    <span class="btn-meta">Certificado de calibraci&oacute;n del son&oacute;metro</span>
+                </span>
+            </a>
+
+            <!-- CALIBRACIÓN CALIBRADOR CA11-02 -->
+            <a href="https://drive.google.com/uc?export=download&id=19QSSoNYp9uT1pCatpTAma9zLzeUANkP3"
+               target="_blank" rel="noopener" class="download-btn">
+                <span class="btn-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" fill="#005600"/>
+                        <polyline points="14 2 14 8 20 8" fill="#005600" stroke="#005600" stroke-width="0.5"/>
+                        <line x1="12" y1="18" x2="12" y2="12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <polyline points="9 15 12 18 15 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="btn-text">
+                    <span class="btn-name">Calibraci&oacute;n Calibrador CA11-02</span>
+                    <span class="btn-meta">Certificado de calibraci&oacute;n del calibrador</span>
                 </span>
             </a>
 
@@ -439,5 +528,41 @@
         <p class="footer-text">Laboratorio de Pruebas &bull; Sistema de Gestión de Calidad &bull; Ejecutiva Ambiental</p>
     </div>
 
+    <script>
+        function hoy() {
+            var d = new Date();
+            return d.getFullYear() + '-' +
+                   String(d.getMonth() + 1).padStart(2, '0') + '-' +
+                   String(d.getDate()).padStart(2, '0');
+        }
+
+        function descargar(url, nombre) {
+            fetch(url)
+                .then(function(r) {
+                    if (!r.ok) throw new Error('fetch falló');
+                    return r.blob();
+                })
+                .then(function(blob) {
+                    var a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = nombre;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    setTimeout(function() { URL.revokeObjectURL(a.href); }, 5000);
+                })
+                .catch(function() {
+                    /* Fallback: descarga directa sin renombre */
+                    var a = document.createElement('a');
+                    a.href = url;
+                    a.download = nombre;
+                    a.target = '_blank';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                });
+            return false;
+        }
+    </script>
 </body>
 </html>
